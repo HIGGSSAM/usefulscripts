@@ -10,10 +10,10 @@ A collection of useful Bash scripts.
 
 An example submission file for gaussian/16-avx array jobs.
 
--[Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
+- [Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
 
 __USAGE__
-* Required an array.txt file with a list of all the inputfile command lines.  
+* Required an array.txt file with a list of all the input file command lines.  
 * Requires the length of the array to be specified.
 
 ```shell
@@ -74,7 +74,7 @@ An example submission file for a gaussian/16-avx job.
 
 __USAGE__
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
-* Change the input and output file names to the desired filename.
+* Change the input and output file names to the desired file name.
 
 ```shell
 sbatch g16_parallel.sub
@@ -94,11 +94,6 @@ bash venv.sh
 # Once the environment has been loaded and activated once it can be deactivated 
 exit
 
-```
-
-The environment only need to be loaded once.
-
-```shell
 # Activating an already loaded environment 
 cd ./testing_venv/bin
 
