@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#SBATCH --job-name=g16lda     #Job Name
+#SBATCH --partition=shared    #Partition on which to run
+#SBATCH --mem=64GB            #Memory
+#SBATCH --nodes=2             #Number of nodes to use
+#SBATCH --ntasks-per-node=1   #Number of tasks per node (aka MPI processes)
+#SBATCH --cpus-per-task=16    #Number of cpus per task (aka OpenMP threads)
+#SBATCH --time=1-00:00:00     #Allocated time
+#SBATCH -o slurm.%N.%j.out    #Slurm output file
+#SBATCH -e slurm.%N.%j.err    #Slurm error file
+
+module load gaussian/16-avx-linda
+
+# Name of input file 
+JobFile=lindatest
+
+# This creates a list of nodes that your job received to run on
+LindaList=./nodes_linda.$SLURM_JOBID
+touch $LindaList
+
+# This creates a jobfile
+JobName=./${JobFile}${SLURM_JOBID}.gjf
+touch $JobName
+
+# Create a list of hostnames(node names) and save it to the LindaList machine file
+srun hostname -s | sort -u > $LindaList
+
+# Tell linda to use ssh
+export GAUSS_LFLAGS=' -opt "Tsnet.Node.lindarsharg: ssh"'
+
+# Read the contents of the machine file and put it in the job file
+workers="%LindaWorkers="$(cat $LindaList | tr "\n" "," | sed "s/,$//")
+
+# Write that out to the job file
+cat <(echo "${workers}") ./$JobFile.gjf > $JobName
+
+# Setting gaussian scratch directory 
+export GAUSS_SCRDIR=$HOME/parallel_scratch
+
+g16 -c=\0-15\ < ${JobFile}${SLURM_JOBID}.gjf  > ${JobFile}${SLURM_JOBID}.out
+
+
+squeue -u $USER > jobqueue.txt
+
+echo "Job Complete"
