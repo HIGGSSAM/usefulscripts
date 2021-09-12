@@ -15,12 +15,10 @@ Installation can be done through cloning either with HTTPS or SSH.
 
 ``` shell
 git clone http://gitlab.eps.surrey.ac.uk/m15631/usefulscripts.git
-cd autoradchem
 ```
 
 ``` shell
 git clone gitlab@gitlab.eps.surrey.ac.uk:m15631/usefulscripts.git
-cd autoradchem
 ```
 
 ## g16_array.sub
