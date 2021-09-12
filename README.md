@@ -9,6 +9,20 @@ A collection of useful Bash scripts.
 - [Full list of Bash commands.](https://ss64.com/bash/)
 - [List of useful Slurm commands.](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
 
+__USAGE__
+
+Installation can be done through cloning either with HTTPS or SSH. 
+
+``` shell
+git clone http://gitlab.eps.surrey.ac.uk/m15631/usefulscripts.git
+cd autoradchem
+```
+
+``` shell
+git clone gitlab@gitlab.eps.surrey.ac.uk:m15631/usefulscripts.git
+cd autoradchem
+```
+
 ## g16_array.sub
 
 An example submission file for gaussian/16-avx array jobs.
