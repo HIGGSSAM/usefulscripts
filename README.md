@@ -89,12 +89,13 @@ An example bash file for creating a python virtual environment with anaconda/201
 __USAGE__
 
 ```shell
+# loads and activates python virtual environment
 bash venv.sh
 
-# Once the environment has been loaded and activated once it can be deactivated 
+# deactivate environment
 exit
 
-# Activating an already loaded environment 
+# activating an already loaded environment 
 cd ./testing_venv/bin
 
 source activate
