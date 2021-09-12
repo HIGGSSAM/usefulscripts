@@ -2,9 +2,9 @@
 
 A collection of useful Bash scripts. 
 
-[Full list of Bash commands](https://ss64.com/bash/)
+[Full list of Bash commands.](https://ss64.com/bash/)
 
-[Useful Slurm commands](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
+[List of useful Slurm commands.](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
 
 ## g16_linda.sub
 
@@ -12,18 +12,14 @@ An example submission file for a gaussian/16-avx-linda jobs.
 
 For information on Linda usage for Gaussian16 jobs please see the links bellow: 
 
-(correct as of 12/09/2021)
 
-[Gaussian 16 Rev. C.01 Release Notes](https://gaussian.com/relnotes/)
-i
-[Gaussian 16 linda manual](https://gaussian.com/g16/lindamanual.pdf.gz)
+- [Gaussian 16 Rev. C.01 Release Notes](https://gaussian.com/relnotes/)
+
+- [Gaussian 16 linda manual](https://gaussian.com/g16/lindamanual.pdf.gz)
 
 (correct as of 12/09/2021)
 
 **USAGE**
-
-An example submission file for a gaussian/16-avx-linda job.
-
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
 * Change the JobFile variable to the desired input file name.  
 
@@ -39,7 +35,6 @@ More example submission files can be found at:
 An example submission file for a gaussian/16-avx job.
 
 **USAGE**
-
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
 * Change the input and output file names to the desired filename.
 
