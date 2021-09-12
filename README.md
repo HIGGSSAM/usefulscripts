@@ -10,6 +10,8 @@ A collection of useful Bash scripts.
 
 An example submission file for gaussian/16-avx array jobs.
 
+[Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
+
 __USAGE__
 * Required an array.txt file with a list of all the inputfile command lines.  
 * Requires the length of the array to be specified.
@@ -39,7 +41,7 @@ sbatch --array=0-"$length" g16_array.sub array.txt > job_id.txt
 length $(cat array2.txt | wc -l)
 
 # save dependant array job id to $dep variable
-dep = $(cat job_id.txt | cut -d " " -f 4
+dep = $(cat job_id.txt | cut -d " " -f 4)
 
 sbatch --array=0-"$length" --dependency=afterok:$dep g16_array.sub array2.txt
 
@@ -52,15 +54,13 @@ An example submission file for a gaussian/16-avx-linda jobs.
 For information on Linda usage for Gaussian16 jobs please see the links bellow: 
 
 
-- [Gaussian 16 Rev. C.01 Release Notes](https://gaussian.com/relnotes/)
+- [Gaussian 16 Rev. C.01 Release Notes.](https://gaussian.com/relnotes/)
 
-- [Gaussian 16 linda manual](https://gaussian.com/g16/lindamanual.pdf.gz)
-
-(correct as of 12/09/2021)
+- [Gaussian 16 linda manual.](https://gaussian.com/g16/lindamanual.pdf.gz)
 
 __USAGE__
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
-* Change the JobFile variable to the desired input file name.  
+* Change the $JobFile variable to the desired input file name.  
 
 ```shell
 sbatch g16_linda.sub
@@ -68,10 +68,9 @@ sbatch g16_linda.sub
 
 ## g16_parallel.sub
 
-More example submission files can be found at:
-[Gaussian16 example files](https://gitlab.eps.surrey.ac.uk/rcs/eureka-examples/-/tree/master/gaussian/gaussian16)
-
 An example submission file for a gaussian/16-avx job.
+
+[More Gaussian 16 example files.](https://gitlab.eps.surrey.ac.uk/rcs/eureka-examples/-/tree/master/gaussian/gaussian16)
 
 __USAGE__
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
@@ -83,3 +82,27 @@ sbatch g16_parallel.sub
 
 ## venv.sh
 
+An example bash file for creating a python virtual environment with anaconda/2019.03
+
+__USAGE__
+
+
+```shell
+bash venv.sh
+
+# Once the environment has been loaded and activated once it can be deactivated 
+exit
+
+```
+
+The environemt only need to be loaded once.
+
+```shell
+# Activating an already loaded environment 
+
+cd ./testing_venv/bin
+
+source activate
+
+cd ../..
+```
