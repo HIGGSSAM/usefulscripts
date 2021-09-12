@@ -6,9 +6,8 @@ Author: Samuel James Higgs: s.higgs@surrey.ac.uk.
 
 A collection of useful Bash scripts. 
 
-[Full list of Bash commands.](https://ss64.com/bash/)
-
-[List of useful Slurm commands.](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
+- [Full list of Bash commands.](https://ss64.com/bash/)
+- [List of useful Slurm commands.](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
 
 ## g16_array.sub
 
@@ -59,7 +58,6 @@ For information on Linda usage for Gaussian16 jobs please see the links bellow:
 
 
 - [Gaussian 16 Rev. C.01 Release Notes.](https://gaussian.com/relnotes/)
-
 - [Gaussian 16 linda manual.](https://gaussian.com/g16/lindamanual.pdf.gz)
 
 __USAGE__
