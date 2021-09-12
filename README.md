@@ -107,7 +107,7 @@ __USAGE__
 bash venv.sh
 
 # deactivate environment
-exit
+deactivate
 
 # activating an already loaded environment 
 cd ./testing_venv/bin
