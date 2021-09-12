@@ -1,0 +1,5 @@
+g16 -c="0-27"  < inputfile1.inp > outputfile1.out
+g16 -c="0-27"  < inputfile2.inp > outputfile2.out
+g16 -c="0-27"  < inputfile3.inp > outputfile3.out
+g16 -c="0-27"  < inputfile4.inp > outputfile4.out
+g16 -c="0-27"  < inputfile5.inp > outputfile5.out
