@@ -1,5 +1,9 @@
 # usefulscripts
 
+Roth Group. Department of Chemistry: p.roth@surrey.ac.uk.
+
+Author: Samuel James Higgs: s.higgs@surrey.ac.uk.
+
 A collection of useful Bash scripts. 
 
 [Full list of Bash commands.](https://ss64.com/bash/)
