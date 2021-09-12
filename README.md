@@ -10,7 +10,7 @@ A collection of useful Bash scripts.
 
 An example submission file for gaussian/16-avx array jobs.
 
-[Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
+-[Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
 
 __USAGE__
 * Required an array.txt file with a list of all the inputfile command lines.  
@@ -70,7 +70,7 @@ sbatch g16_linda.sub
 
 An example submission file for a gaussian/16-avx job.
 
-[More Gaussian 16 example files.](https://gitlab.eps.surrey.ac.uk/rcs/eureka-examples/-/tree/master/gaussian/gaussian16)
+- [More Gaussian 16 example files.](https://gitlab.eps.surrey.ac.uk/rcs/eureka-examples/-/tree/master/gaussian/gaussian16)
 
 __USAGE__
 * Slurm Job parameters can be specified by changing the #SBATCH commands.
@@ -82,10 +82,11 @@ sbatch g16_parallel.sub
 
 ## venv.sh
 
-An example bash file for creating a python virtual environment with anaconda/2019.03
+An example bash file for creating a python virtual environment with anaconda/2019.03.
+
+- [Using Python and R on the HPC](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/using-python-and-r-on-hpc)
 
 __USAGE__
-
 
 ```shell
 bash venv.sh
@@ -95,11 +96,10 @@ exit
 
 ```
 
-The environemt only need to be loaded once.
+The environment only need to be loaded once.
 
 ```shell
 # Activating an already loaded environment 
-
 cd ./testing_venv/bin
 
 source activate
