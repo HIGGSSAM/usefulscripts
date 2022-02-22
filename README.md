@@ -1,25 +1,9 @@
 # usefulscripts
 
-Roth Group. Department of Chemistry: p.roth@surrey.ac.uk.
-
-Author: Samuel James Higgs: s.higgs@surrey.ac.uk.
-
 A collection of useful Bash scripts. 
 
 - [Full list of Bash commands.](https://ss64.com/bash/)
 - [List of useful Slurm commands.](https://bookstack.surrey.ac.uk/books/high-performance-computing-%28hpc%29/page/useful-slurm-commands)
-
-__USAGE__
-
-Installation can be done through cloning either with HTTPS or SSH. 
-
-``` shell
-git clone http://gitlab.eps.surrey.ac.uk/m15631/usefulscripts.git
-```
-
-``` shell
-git clone gitlab@gitlab.eps.surrey.ac.uk:m15631/usefulscripts.git
-```
 
 ## g16_array.sub
 
@@ -28,7 +12,7 @@ An example submission file for gaussian/16-avx array jobs.
 - [Slurm array job documentation.](https://slurm.schedmd.com/job_array.html)
 
 __USAGE__
-* Required an array.txt file with a list of all the input file command lines.  
+* Requires an array.txt file with a list of all the input file command lines.  
 * Requires the length of the array to be specified.
 
 ```shell
@@ -66,7 +50,7 @@ sbatch --array=0-"$length" --dependency=afterok:$dep g16_array.sub array2.txt
 
 An example submission file for a gaussian/16-avx-linda jobs.
 
-For information on Linda usage for Gaussian16 jobs please see the links bellow: 
+For information on Linda usage for Gaussian16 jobs please see the following links: 
 
 
 - [Gaussian 16 Rev. C.01 Release Notes.](https://gaussian.com/relnotes/)
@@ -103,7 +87,7 @@ An example bash file for creating a python virtual environment with anaconda/201
 __USAGE__
 
 ```shell
-# loads and activates python virtual environment
+# loads and activates python virtual environment called testing_venv by default
 bash venv.sh
 
 # deactivate environment
